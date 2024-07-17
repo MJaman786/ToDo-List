@@ -26,14 +26,17 @@ body {
 }
 
 .container h1 {
-    font-size: 3rem;
+    font-size: 6rem;
+    font-weight: bolder;
+    font-stretch: narrower;
     text-align: center;
     padding-bottom: 10px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-fill-color: #fff;
-    -webkit-text-stroke-color: #141E46;
-    /* color: #06D001; */
+    -webkit-text-stroke: 1px transparent; /* Ensure stroke is applied but transparent */
+    background: linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* This will show the gradient color */
 }
+
 
 .container .main-row {
     display: flex;
@@ -73,6 +76,9 @@ button {
 }
 
 @media (max-width:600px) {
+    .container h1{
+        font-size: 2rem;
+    }
     .main-row {
         flex-direction: column;
     }
